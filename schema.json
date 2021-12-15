@@ -1,0 +1,92 @@
+[
+  {
+    "namespace": "SpamScores",
+    "functions": [
+      {
+        "name": "setScoreBounds",
+        "type": "function",
+        "description": "",
+        "async": false,
+        "parameters": [
+          {
+            "name": "lower",
+            "type": "number"
+          },
+          {
+            "name": "upper",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "setHideIconScoreOptions",
+        "type": "function",
+        "description": "",
+        "async": false,
+        "parameters": [
+          {
+            "name": "hidePositive",
+            "type": "boolean"
+          },
+          {
+            "name": "hideNeutral",
+            "type": "boolean"
+          },
+          {
+            "name": "hideNegative",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "name": "setCustomMailscannerHeaders",
+        "type": "function",
+        "description": "",
+        "async": false,
+        "parameters": [
+          {
+            "name": "customMailscannerHeaders",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      {
+        "name": "addDynamicCustomHeaders",
+        "type": "function",
+        "description": "",
+        "async": true,
+        "parameters": [
+          {
+            "name": "dynamicHeaders",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      {
+        "name": "repaint",
+        "type": "function",
+        "description": "",
+        "async": false,
+        "parameters": [
+          {
+            "name": "windowId",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "clear",
+        "type": "function",
+        "description": "",
+        "async": false,
+        "parameters": []
+      }
+    ]
+  }
+]

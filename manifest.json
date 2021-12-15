@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "0.1.0",
+  "author": "Shizer",
+  "default_locale": "es",
+  "applications": {
+    "gecko": {
+      "id": "spam+@dlh2",
+      "strict_min_version": "78.0a1",
+      "strict_max_version": "91.*"
+    }
+  },
+  "icons": {
+    "64": "images/icon.png",
+    "32": "images/icon-32px.png",
+    "16": "images/icon-16px.png"
+  },
+  "background": {
+    "page": "src/background/background.html"
+  },
+  "browser_action": {
+    "default_area": "maintoolbar",
+    "default_icon": {
+      "64": "images/icon.png",
+      "32": "images/icon-32px.png",
+      "16": "images/icon-16px.png"
+    },
+    "default_label": "Delete Spam",
+    "default_title": "Delete Spam"
+  },
+  "permissions": ["messagesRead", "messagesDelete", "accountsRead", "storage"],
+  "experiment_apis": {
+    "SpamScores": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["SpamScores"]],
+        "script": "src/experiments/experiments.js",
+        "events": ["startup"]
+      }
+    }
+  },
+  "message_display_action": {
+    "default_popup": "src/browser/popup/popup.html",
+    "default_title": "Spam Scores"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": false,
+    "browser_style": true
+  },
+  "web_accessible_resources": ["images/score_neutral.png", "images/score_positive.png", "images/score_negative.png"]
+}

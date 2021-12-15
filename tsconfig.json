@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES2021",
+        "module": "ES2020",
+        "rootDir": "src",
+        "outDir": "dist",
+        "lib": [
+            "DOM",
+            "ES2021"
+        ]
+    },
+    "include": [
+        "src/"
+    ]
+}
